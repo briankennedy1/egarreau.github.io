@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <head>
-  <title>Your page title here</title>
+  <title>Blog Post The First</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
 </head>
 
 <main>
-  <h1>Post Title</h1>
-  <h2>The subtitle, if you want it</h2>
-  <h4>Today's Date</h4>
+  <h1>Fears, Tears, and the Eldritch World of the Command Line</h1>
+  <h2>Dev Bootcamp, Week 1</h2>
+  <h4>4/23/15</h4>
 
   <section>
     <p>
-      Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+      So Dev Bootcamp is requiring me and my fellow boots to write blog posts about our learning experience. And despite a degree in English and general confidence in my writing/communication skills, for some reason this makes me go EUGHHHHHHHH all over. I think it's a combination of the prompt they've given us for this week (chat about version control and why GitHub is a good idea), the fact that we have to promote it on Twitter (I'm now reconsidering the option to create a throwaway account so I don't have to expose myself to my friends and family), or just the fact that this whole Learning New Things process terrifies me when done in front of an audience. DBC is all about vulnerability and exposing your ignorance, and in theory I am 100% on board (thanks, Brene Brown!) but in practice I haaaaate this. So, deep breath, ignore the lack of styling on the page, push down all the unexpected anxieties this assignment as brought up, and let's chat about version control.
     </p>
     <p>
-        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
+      I think the biggest thing I learned this week was that a lot of the stuff I thought was super fancy and complicated is actually pretty straightforward, it just has a lot of complicated rituals and incantations around it so it seems scary. Version control just means a way of tracking changes. Git lets you track changes to your project systematically, and GitHub lets a whole lot of scattered people track all their changes at once. This is pretty clearly a good thing, in order to not muddy up the code and make sure that the live version is the version that works, and also allow anyone to go back to a previous version if something new happens to break everything.
     </p>
     <p>
-        Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
+      The reason git (and GitHub) seem super complicated and strange is that in order to use it (at least, in order to really understand it), you have to pray to the great goddess Unix, using one of Her shells -- high priests that translate between Her divine thoughts and us mere mortals. There is much argument about which shell is the best, but here at The DBC School of Witchcraft and Wizardry we are followers of bash. I am a brand new devotee of bash so I am not yet super familiar with his ways, but so far my initiation has gone smoothly. Git is just one way in which Unix performs Her work, but it is an important and powerful way. To pray to Her you recite incantations to bash, and if spoken correctly (and if the moon cycle is right) She will grant your wish. You must first tell bash what sort of miracle you are praying for (a git miracle, for example), and then the specific action you want that miracle to manifest, and the target of your miracle. I'll give you an example, but first I'll tell you a little more about the relationship between git and GitHub.
     </p>
-
-      <!-- copy and paste as many sections as you want to add paragraphs -->
+    <p>
+      When you use git locally on your computer, there are three stages to every change you make: working, staged, and committed. Working is when you're making changes in your text editor, staged is when you notify the high priest bash that you have changes ready to be saved, and committed is when you pray to bash to save your changes. Through the miracle of git, this not only saves your changes but also keeps track of every change you've made previously, in case you screw the pooch and need to roll back your work to a previous version. Yea, the miracle of git does truly enable time travel. Praise Unix.
+    </p>
+    <p><em>[I realize this extended metaphor is imperfect, since you don't actually have to use Unix to use git, and the two aren't that closely related. I'm learning; humor me.]</em></p>
+    <p>
+      So as an example, for you new initiates out there, let's say I have this blog post saved on my computer as an html file called blog1.html (because I am very creative). When I am ready to record the changes I've made, I pray to bash:
+      <code>
+        git add blog1.html
+        git commit -m "update blog post"
+      </code>
+      In the first line, I pray to bash for a git miracle, and indicate specifically that I want the miracle to ready my changes to blog1.html for saving. In the second line, I indicate my hope for a second git miracle, this time to "commit" the changes (save them) with the message "update blog post" as and indicator for what this change does.
+    </p>
+    <p>
+      These constant prayers may seem greedy or demanding, but Unix is a truly giving digital deity. Praise Unix.
+    </p>
   </section>
 </main>
-
