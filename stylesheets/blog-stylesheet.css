@@ -1,0 +1,18 @@
+main{
+  margin: 2em 5em;
+}
+.date{
+  position:absolute;
+  top:-10px;
+  right:0;
+  /*border: solid 1px blue;*/
+}
+
+.title{
+  border-bottom: solid 1px #898989;
+  position: relative;
+}
+
+.subhead{
+  line-height: 0px
+}
