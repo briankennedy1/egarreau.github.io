@@ -1,23 +1,19 @@
+header{
+  height: 3.5em;
+  font-size: 1.5em;
+}
+
 main{
-  margin: 2em 5em;
+  margin: 5em 10em;
+  text-align: left;
 }
 
 .date{
- /* position:absolute;
-  bottom:10px;
-  right:0; */
   border-top: solid 1px #898989;
   text-align: right;
   padding-top:10px;
 }
 
-/*
-.title{
-  border-bottom: solid 1px #898989;
-  position: relative;
-}
-*/
-
-.subhead{
-  line-height: 0px
+h1{
+  font-size: 2em;
 }
