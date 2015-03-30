@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <title><!--page title--></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<header>
+  <nav>
+    <a href="#">About Me</a> |
+    <a href="/blog">Blog</a> |
+    <a href="#">Projects</a> |
+    <a href="#">Resume</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="headline">Home is Where the Positioning Is</h1>
+  <h2 class="subhead">Fixed, Relative, and Absolute Positioning in CSS</h2>
+  <h4 class="date">March 29th, 2015</h4>
+
+  <section>
+    <p>
+      Every element of an HTML document has a home. For most elements, their home is static. The default positioning CSS for all elements is:
+    </p>
+    <p>
+      <code>position:static;</code>
+    </p>
+      All this means is that the element lives on its own, in the same neighborhood as all the other elements, happy in its home.
+    </p>
+    <p>
+      But some elements get antsy (you know how elements can be). An element that wants to leave its current home, but doesn't want any other elements moving in on its space, gets the CSS
+    </p>
+    <p>
+      <code>position:relative;</code>
+    </p>
+    <p>
+      This allows the element to be moved around, but all the other elements will respect its home and not try to take over the space that it originally occupied.
+    </p>
+    <p>
+      More adventurous elements can be assigned the position <code>fixed</code>, which takes it out completely from the flow of the the other elements and gives it a new home on your browser window. In this context we can think of the browser window and the webpage you're viewing as two sheets of paper on top of one another (yeah, I'm mixing metaphors. I like to live dangerously). The top sheet (the browser) is transparent and usually doesn't matter. But when you use <code>position:fixed;</code> the element is removed from the bottom sheet and put on the transparent top sheet. The other elements act like it doesn't exist, and the fixed element floats over them like a <a href="https://www.youtube.com/watch?v=YLO7tCdBVrA">happy cloud</a> (keep that metaphor mixer churnin'). If you ever see a navigation bar that stays at the top of the page while you scroll down, it's likely that's a fixed element.
+    </p>
+    <p>
+      Then again, some elements never quite make it out of their parents' house. This kind of elements gets the position <code>absolute</code>, which allows it to move around in relation to its closest ancestor element that has a relationship other than static.
+    </p>
+  </section>
+</main>
+
+<footer>
+</footer>
+
