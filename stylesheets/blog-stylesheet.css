@@ -11,10 +11,12 @@ main{
   padding-top:10px;
 }
 
+/*
 .title{
-  /*border-bottom: solid 1px #898989;*/
+  border-bottom: solid 1px #898989;
   position: relative;
 }
+*/
 
 .subhead{
   line-height: 0px
