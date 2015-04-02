@@ -17,3 +17,12 @@ main{
 h1{
   font-size: 2em;
 }
+
+footer{
+  color:#fff;
+}
+
+code{
+  color: #000;
+  text-decoration: none;
+}

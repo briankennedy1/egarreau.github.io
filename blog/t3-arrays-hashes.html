@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog Post the Fourth</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<header>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="#">About Me</a> |
+    <a href="/blog">Blog</a> |
+    <a href="#">Projects</a> |
+    <a href="#">Resume</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="headline">A Few of My Favorite Things</h1>
+  <h2 class="subhead">Arrays and Hashes in Ruby</h2>
+  <h4 class="date">April 2nd, 2015</h4>
+
+  <section>
+    <p>
+      Ruby has two important organizational structures: arrays and hashes. They are both actually just fancy lists.
+    </p>
+    <p>
+      An array is a numbered list. You can iterate through the list to look for a particular item, or if you know the number of an item you can go straight to it. For example, here's a ranking of colors in order of my favorites:
+    </p>
+    <ol start="0">
+      <li>purple</li>
+      <li>blue</li>
+      <li>yellow</li>
+      <li>green</li>
+      <li>red</li>
+      <li>orange</li>
+    </ol>
+    <p>Accessing this list in Ruby is sort of like calling a phone number with an automated messaging system. The kind robot voice says, "Welcome to Evangeline's Favorite Colors. Please listen closely, as our options have changed. If you know your party's extension, please dial it now." If want purple and you know me well enough to know that it's my favorite color (by, for example, <a href="https://twitter.com/egarreau">glancing at my twitter profile</a> or <a href="http://scontent-b.cdninstagram.com/hphotos-xap1/t51.2885-15/1389789_802910363064893_197713000_a.jpg">passing me on the street</a>) you can dial 0 without listening to all the other options. If you want to know what my least favorite color is, you can dial 5 to get orange without listening to the options. Otherwise, you can listen to the operator iterate through the list to know which number to dial.</p>
+    <p>Here's how this would look in Ruby:</p>
+    <code>
+      favoriteColors = ['purple', 'blue', 'yellow', 'green', 'red', 'orange'] #This creates the list of my favorite colors
+      <br>
+      <br>
+      bestColor = favoriteColors[0] #This assigns the variable bestColor with the first item in the list
+      <br>
+      <br>
+      puts bestColor #This prints 'purple'
+      <br>
+      <br>
+      worstColor = favoriteColors[5] #This assigns the variable worstColor with the last item in the list. If you didn't know how long the list was, you could also use favoriteColors[-1] to access the last item, regardless of length.
+      <br>
+      <br>
+      puts worstColor #This prints 'orange'
+      <br>
+      <br>
+      for i in 0..5 do <br>
+      &nbsp;&nbsp;if favoriteColors[i] == 'green' <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;greenRank = i <br>
+      &nbsp;&nbsp;end <br>
+      end <br>
+      #Just like listening to the robo-operator, this loop goes through the list in order to check for green. When it finds green, it assigns green's index (or list number) to a variable called greenRank
+      <br>
+      <br>
+      puts greenRank #This prints 3
+    </code>
+    <p>
+      So now we know how to make a numbered list and extract information from it. But what if I want to make a collection of my favorites in a bunch of different categories? I don't want to rank them, I just want to list my favorite color, holiday, fruit, vegetable, and fictional female character.
+    </p>
+    <p>
+      Can I do this with an array? Sort of. It would look like this:
+    </p>
+    <code>favoriteThings = ['purple', 'Springween', 'orange', 'avacado', 'Leslie Knope']</code>
+    <p>
+      But this list is pretty meaningless, right? We know from the name that it's a list of my favorite things, but in what categories? Avocado could be my favorite flavor of milkshake. Leslie Knope could be my favorite alternate universe candidate for president in 2016. And god forbid, orange could be mistaken for my favorite color, when we all know it's my LEAST favorite color. <a href="http://imgur.com/gallery/eZqcr">There HAS to be a better way!</a>
+    </p>
+    <p>
+      This is where hashes come in. If an array is like a robo-operator, we can think of a hash as a shelf of labeled boxes. So my "Favorite Things" shelf would have five boxes, labeled color, holiday, fruit, veggie, and fictional heroine. The color box would have purple in it, the holiday box would have Springween, the fruit box would contain orange, the veggie box avocado, and the heroine box the inimitable Leslie Knope. You can make your way across the shelf, browsing the labels and opening the boxes to find what you're looking for.
+    </p>
+    <p>
+      If you're familiar with programming, you may have heard a similar box metaphor used to explain how variables work. So why can't we just do the same thing with variables and arrays instead of using a hash? We sort of can -- it would look like this:
+    </p>
+    <code>
+      color = 'purple' <br>
+      holiday = 'Springween' <br>
+      fruit = 'orange' <br>
+      veggie = 'avocado' <br>
+      heroine = 'Leslie Knope' <br>
+      <br>
+      favoriteThings = [color, holiday, fruit, veggie, heroine]
+    </code>
+    <p>
+      That would function approximately the same as a hash, at least at my level of understanding -- though I am fairly confident there are a lot of specialized and helpful things you can do with a hash that just aren't possible with an array of variables. But even putting aside the technical limitations of this setup, it's also harder to read and requires more effort. In addition, the get information out of that list, you would need to know the order of the variables. By contrast, building a hash is simple and easy to understand for anyone who is reading your code:
+    </p>
+    <code>
+      favoriteThings = { <br>
+      &nbsp;:color => 'purple', <br>
+      &nbsp;:holiday => 'Springween', <br>
+      &nbsp;:fruit => 'orange', <br>
+      &nbsp;:veggie => 'avocado' <br>
+      &nbsp;:heroine => 'Leslie Knope' <br>
+    }
+    </code>
+    <p>
+      Now to find out my favorite holiday, you would simply type <code>favoriteThings[:holiday]</code> and the hash would return <code>'Springween'</code>. You don't need to iterate through the whole list, and you don't need to know where in the list <code>:holiday</code> is stored.
+    </p>
+    <p>
+      Neither arrays nor hashes are intrinsically better for structuring information; they can each be used best for different purposes. Like most tools, they have their own advantages and disadvantages depending on the scenario. But I think we can all agree: avocados are delicious.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <sup id="footnote">Note: upon cursory Wikipedia-based research I have discovered that avocados are technically a berry. I stand by my preference.</sup>
+</footer>
